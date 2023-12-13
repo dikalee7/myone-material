@@ -10,8 +10,8 @@ const SampleRouter = () => {
           headerInfo={{
             ...baseHeader,
             title: 'MY ONE',
-            hideBack: true,
-            hideHome: true,
+            hideBack: false,
+            hideHome: false,
           }}
         />
       ),
