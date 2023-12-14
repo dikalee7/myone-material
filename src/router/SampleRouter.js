@@ -9,7 +9,7 @@ const SampleRouter = () => {
         <Sample1
           headerInfo={{
             ...baseHeader,
-            title: 'MY ONE',
+            title: 'Sample1',
             hideBack: false,
             hideHome: false,
           }}
