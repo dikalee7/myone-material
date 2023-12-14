@@ -26,7 +26,7 @@ const Body = () => {
           <HeaderContext.Provider value={{ $header }}>
             <Header />
             <main>
-              <Container style={{ minHeight: '80vh' }}>
+              <Container style={{ minHeight: '80vh', paddingTop: '30px' }}>
                 <Outlet />
               </Container>
             </main>

@@ -43,44 +43,42 @@ const Header = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <AppBar position='static'>
-          <Container maxWidth='xl'>
-            <Toolbar disableGutters>
-              {headerInfo.hideBack ? (
-                <AccountBalanceWalletTwoToneIcon
-                  sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }}
-                />
-              ) : (
-                <ArrowCircleLeftIcon
-                  sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }}
-                  onClick={goBack}
-                />
-              )}
+        <AppBar position='static' style={{ padding: '1px' }}>
+          <Toolbar>
+            {headerInfo.hideBack ? (
+              <AccountBalanceWalletTwoToneIcon
+                sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+              />
+            ) : (
+              <ArrowCircleLeftIcon
+                sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+                onClick={goBack}
+              />
+            )}
 
-              <Typography
-                variant='h6'
-                noWrap
-                // component='a'
-                // href='#app-bar-with-responsive-menu'
-                sx={{
-                  mr: 2,
-                  display: { xs: 'none', md: 'flex' },
-                  fontWeight: 700,
-                  letterSpacing: '.3rem',
-                  color: 'inherit',
-                  textDecoration: 'none',
-                }}
-              >
-                {headerInfo.title}
-              </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} />
-              {!headerInfo.hideHome ? (
-                <Box sx={{ flexGrow: 0 }}>{homeArea}</Box>
-              ) : (
-                <Box sx={{ flexGrow: 0 }} />
-              )}
-            </Toolbar>
-          </Container>
+            <Typography
+              variant='h6'
+              noWrap
+              // component='a'
+              // href='#app-bar-with-responsive-menu'
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              {headerInfo.title}
+            </Typography>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} />
+            {!headerInfo.hideHome ? (
+              <Box sx={{ flexGrow: 0 }}>{homeArea}</Box>
+            ) : (
+              <Box sx={{ flexGrow: 0 }} />
+            )}
+          </Toolbar>
         </AppBar>
       </ThemeProvider>
     </>
